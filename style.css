@@ -1,0 +1,314 @@
+@import url(fonts.css);
+* {
+    font-family: Roboto, Georgias;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    row-gap: 10px;
+    
+}
+
+.header {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    box-shadow: 0px 5px 20px 1px rgb(150, 150, 150);
+
+}
+.cardHolder{
+    box-shadow: 0px 2px 20px 1px rgb(150, 150, 150);
+}
+header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+header input {
+    width: 70%;
+    height: 40%;
+    border-radius: 10px;
+    border-style: none;
+    margin: 2px;
+    font-size: large;
+    background-color: rgb(233, 237, 247);
+}
+header .inputcontainer:before {
+    content: url(./icons/magnify.svg);
+    cursor: pointer;
+}
+
+.inputcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: calc(2% + 50px);
+    gap: 1%;
+}
+header input:focus {
+    outline: beige 2px solid;
+}
+img.profilesmall {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+img.profilelarge {
+    aspect-ratio: 1;
+    height: 90px;
+    border-radius: 50%;
+}
+header ul {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+
+}
+header li {
+    height: fit-content;
+    width: fit-content;
+    font-weight: 900;
+    font-size: large;
+}
+.Options {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.Introduction{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    padding-left: 2%;
+    gap: 1%;
+}
+.Introduction ul{
+    list-style: none;
+    font-weight: 900;
+    display: grid;
+    padding: 0;
+}
+.Introduction ul :nth-child(2){
+    font-size: xx-large;
+}
+
+.HeaderButtons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.HeaderButtons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    width: 90%;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10%;
+}
+.HeaderButtons li {
+    width: clam(100px, 33%, 200px);
+}
+.HeaderButtons button {
+    aspect-ratio: 2.5;
+    width: 100%;
+    border-radius: 20px;
+    border-style: none;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-size: 1re;
+    color: white;
+    background-color: cornflowerblue;
+}
+aside {
+    grid-row: 1/3;
+    padding-left: 10%;
+    display: grid;
+    grid-template-rows: 2%;
+    grid-auto-rows: 2%;
+    gap: 2%;
+    font-weight: 900;
+    font-size: large;
+    color: white;
+    background-color:cornflowerblue;
+}
+aside .Dashboard {
+    font-size: xx-large;
+    height: fit-content;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-row: 1/3;
+}
+aside .Dashboard img {
+    aspect-ratio: 1;
+    width: 1.3em;
+}
+.DashboardOptions {
+    display: grid;
+    gap: 5vh;
+}
+
+.PersonalOptions{
+    display: grid;
+    height: fit-content;
+    grid-auto-rows: 4rem;
+    align-items: center;
+    justify-content: start;
+}
+.PersonalOptions div {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+
+}
+
+.PersonalOptions div img {
+    filter: invert(1);
+}
+
+.main-content {
+    grid-column: 2/3;
+    grid-row: 2/ 3;
+    display: grid;
+    gap: 2vw;
+    padding: 0 2vw;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(233, 237, 247);
+}
+.Projects {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    height: 97%;
+    /*OMG I COULD NOT FOR THE LIFE OF ME FIGURE OUT WHY  THE CARDS ALL HAD TRACKS WAY BIGGER THAN THE CONTENT INSIDE (278PX TRACKS), APPARENTLY IT WAS BECAUSE THE ANNOUNCEMENTS AND TRENDINGS HAD TO TAKE UP THE SAME VERTICAL HEIGHT (BECAUSE THEY WERE IN A GRID WITH PROJECTS IN MAIN-CONTENT)*/
+}
+.Projects .descriptor, .Announcements .descriptor, .Trending .descriptor{
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: x-large;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.ProjectHolder{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+}
+.ProjectHolder .card{
+    border-radius: 10px;
+    border-right: transparent 1rem solid;
+    border-left: orange 1rem solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+.card {
+    background-color: white;
+}
+.ProjectHolder .card .title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.ProjectHolder .card .icons{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+.Announcements{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+}
+
+.Announcements .cardHolder {
+    background-color: white;
+    padding: 0px 10%;
+    border-radius: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+}
+.Announcements .cardHolder .card{
+    border-bottom: gray 2px solid;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+}
+.Announcements .cardHolder .card:nth-last-child(1){
+    border-bottom: none;
+}
+.Announcements .card .title {
+    font-weight: bold;
+    font-size: large;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.Trending{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.Trending .cardHolder{
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    height: 100%;
+}
+.Trending .card {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+.Trending .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+.Trending .card ul {
+    list-style: none;
+    padding: 0;
+}
+.Trending .card ul :first-child{
+    font-weight: bold;
+}
+
+img:hover, button:hover, .Trending ul:hover, .PersonalOptions div:hover, header li{
+    cursor: pointer;
+}
+
+.PersonalOptions div{
+    width: fit-content;
+}
