@@ -308,7 +308,6 @@ aside .Dashboard img {
 img:hover, button:hover, .Trending ul:hover, .PersonalOptions div:hover, header li{
     cursor: pointer;
 }
-
 .PersonalOptions div{
     width: fit-content;
 }
